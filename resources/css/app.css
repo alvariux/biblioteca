@@ -9,3 +9,75 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Clases CSS compartidas para ambos formularios */
+.form-container {
+    @apply bg-white rounded-xl shadow-lg p-8 max-w-md w-full mx-auto;
+}
+
+.form-title {
+    @apply text-2xl font-bold text-gray-800 mb-2 text-center;
+}
+
+.form-subtitle {
+    @apply text-gray-600 mb-8 text-center;
+}
+
+.form-group {
+    @apply mb-6;
+}
+
+.form-label {
+    @apply block text-gray-700 font-medium mb-2;
+}
+
+.form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+}
+
+.form-input-icon {
+    @apply absolute left-4 top-3.5 text-gray-400;
+}
+
+.form-input-wrapper {
+    @apply relative;
+}
+
+.form-button-primary {
+    @apply w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
+}
+
+.form-button-secondary {
+    @apply w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-gray-300;
+}
+
+.form-link {
+    @apply text-blue-600 hover:text-blue-800 font-medium transition-colors;
+}
+
+.form-separator {
+    @apply relative flex items-center justify-center my-6;
+}
+
+.form-separator-line {
+    @apply border-t border-gray-300 w-full;
+}
+
+.form-separator-text {
+    @apply absolute bg-white px-4 text-gray-500 text-sm;
+}
+
+.form-footer {
+    @apply mt-6 text-center text-gray-600;
+}
+
+/* Responsive adicional */
+@media (max-width: 640px) {
+    .form-container {
+        @apply p-6;
+    }
+    
+    .form-title {
+        @apply text-xl;
+    }
+}

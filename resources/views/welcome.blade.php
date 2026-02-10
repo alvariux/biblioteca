@@ -102,7 +102,7 @@
                         <li><a href="#eventos" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Eventos</a></li>
                         <li><a href="#contacto" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Contacto</a></li>
                         <li>
-                            <a href="#login" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-colors duration-300 flex items-center">
+                            <a href="{{ route('login') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-colors duration-300 flex items-center">
                                 <i class="fas fa-sign-in-alt mr-2"></i> Iniciar Sesión
                             </a>
                         </li>
