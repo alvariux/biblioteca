@@ -23,7 +23,8 @@
                     <h2 class="form-title">Iniciar Sesión</h2>
                     <p class="form-subtitle">Accede a tu cuenta de la biblioteca</p>
                     
-                    <form id="loginForm">
+                    <form id="loginForm" action="{{ route('login') }}" method="POST">
+                        @csrf 
                         <!-- Campo Email -->
                         <div class="form-group">
                             <label for="loginEmail" class="form-label">
