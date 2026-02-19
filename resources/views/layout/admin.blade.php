@@ -70,7 +70,7 @@
             <nav class="flex-grow p-4">
                 <ul class="space-y-2">
                     <li>
-                        <a href="#inicio" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors">
+                        <a href="{{ route('home') }}" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors">
                             <i class="fas fa-home mr-3 w-6 text-center"></i>
                             <span>Inicio</span>
                         </a>
@@ -139,7 +139,7 @@
                     <!-- Menú de navegación header -->
                     <nav class="hidden md:block">
                         <ul class="flex space-x-2">
-                            <li><a href="#inicio" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Inicio</a></li>
+                            <li><a href="{{ route('home') }}" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Inicio</a></li>
                             <li><a href="#usuarios" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Usuarios</a></li>
                             <li><a href="#libros" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Libros</a></li>
                             <li><a href="#prestamos" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Préstamos</a></li>

@@ -84,6 +84,7 @@
             });
             
             // Cambiar página al hacer clic en enlaces del header
+            /*
             headerLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -91,6 +92,7 @@
                     changePage(pageName);
                 });
             });
+            */
             
             // Cerrar sidebar en pantallas grandes al redimensionar
             window.addEventListener('resize', function() {
