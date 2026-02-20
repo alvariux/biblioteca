@@ -87,9 +87,9 @@
         <div class="p-4 border-b">
             <div class="flex justify-between items-center">
                 <h2 class="text-lg font-semibold">Lista de Libros</h2>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md flex items-center">
+                <a href="{{ route('libros.create') }}" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md flex items-center">
                     <i class="fas fa-plus mr-2"></i> Agregar libro
-                </button>
+                </a>
             </div>
         </div>
         
@@ -106,19 +106,19 @@
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                    <!-- Filas de ejemplo -->
+                    @foreach($libros as $libro)
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="font-medium text-gray-900">Cien años de soledad</div>
+                            <div class="font-medium text-gray-900">{{ $libro->nombre }}</div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-gray-900">Gabriel García Márquez</div>
+                            <div class="text-gray-900">{{ $libro->autor }}</div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-gray-900">978-0307474728</div>
+                            <div class="text-gray-900">{{ $libro->isbn }}</div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Literatura</span>
+                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">{{ $libro->categoria->nombre }}</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Disponible</span>
@@ -128,48 +128,7 @@
                             <a href="#" class="text-red-600 hover:text-red-900">Eliminar</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="font-medium text-gray-900">1984</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-gray-900">George Orwell</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-gray-900">978-0451524935</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">Ciencia Ficción</span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Prestado</span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                            <a href="#" class="text-blue-600 hover:text-blue-900 mr-3">Editar</a>
-                            <a href="#" class="text-red-600 hover:text-red-900">Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="font-medium text-gray-900">Don Quijote de la Mancha</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-gray-900">Miguel de Cervantes</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-gray-900">978-8420732855</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Literatura</span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Disponible</span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                            <a href="#" class="text-blue-600 hover:text-blue-900 mr-3">Editar</a>
-                            <a href="#" class="text-red-600 hover:text-red-900">Eliminar</a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
