@@ -124,8 +124,12 @@
                             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Disponible</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                            <a href="#" class="text-blue-600 hover:text-blue-900 mr-3">Editar</a>
-                            <a href="#" class="text-red-600 hover:text-red-900">Eliminar</a>
+                            <a href="{{ route('libros.edit',$libro->id) }}" class="text-blue-600 hover:text-blue-900 mr-3">Editar</a>
+                            <form action="{{ route('libros.destroy', $libro->id) }}" method="POST" class="inline-block">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-600 hover:text-red-900">Eliminar</button>
+                            </form>                            
                         </td>
                     </tr>
                     @endforeach
