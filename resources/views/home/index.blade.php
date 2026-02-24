@@ -139,6 +139,10 @@
         
         <!-- Paginación -->
         <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
+            {{ $libros->links() }}
+        </div>
+        <!--
+        <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
             <div class="text-sm text-gray-700">
                 Mostrando <span class="font-medium">1</span> a <span class="font-medium">3</span> de <span class="font-medium">1,247</span> resultados
             </div>
@@ -150,6 +154,7 @@
                 <button class="px-3 py-1 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">Siguiente</button>
             </div>
         </div>
+        -->
     </div>
 </main>
 @endsection
