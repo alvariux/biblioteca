@@ -6,7 +6,7 @@
     <!-- Breadcrumbs -->
     <nav class="mb-6 text-sm text-gray-600">
         <ol class="flex space-x-2">
-            <li><a href="#inicio" class="hover:text-blue-600">Inicio</a></li>
+            <li><a href="{{ route('home') }}" class="hover:text-blue-600">Inicio</a></li>
             <li><span class="mx-2">/</span></li>
             <li class="text-blue-600 font-medium" id="current-page">Libros</li>
         </ol>
