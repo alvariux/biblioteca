@@ -74,25 +74,7 @@
                             <i class="fas fa-home mr-3 w-6 text-center"></i>
                             <span>Inicio</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#usuarios" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors">
-                            <i class="fas fa-users mr-3 w-6 text-center"></i>
-                            <span>Usuarios</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('categorias.index') }}" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors">
-                            <i class="fas fa-tags mr-3 w-6 text-center"></i>
-                            <span>Categorías</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#libros" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors active">
-                            <i class="fas fa-book-open mr-3 w-6 text-center"></i>
-                            <span>Libros</span>
-                        </a>
-                    </li>
+                    </li>                    
                     <li>
                         <a href="#prestamos" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors">
                             <i class="fas fa-exchange-alt mr-3 w-6 text-center"></i>
@@ -112,11 +94,11 @@
             <div class="p-4 border-t border-gray-700">
                 <div class="flex items-center">
                     <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
-                        <span class="font-bold">A</span>
+                        <span class="font-bold">{{ strtoupper(substr(auth()->user()->name, 0, 1)) }}</span>
                     </div>
                     <div class="ml-3">
-                        <p class="font-medium">Administrador</p>
-                        <p class="text-xs text-gray-400">admin@biblioteca.com</p>
+                        <p class="font-medium">{{ auth()->user()->name }}</p>
+                        <p class="text-xs text-gray-400">{{ auth()->user()->email }}</p>
                     </div>
                 </div>
             </div>
@@ -139,10 +121,7 @@
                     <!-- Menú de navegación header -->
                     <nav class="hidden md:block">
                         <ul class="flex space-x-2">
-                            <li><a href="{{ route('home') }}" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Inicio</a></li>
-                            <li><a href="#usuarios" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Usuarios</a></li>
-                            <li><a href="#libros" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Libros</a></li>
-                            <li><a href="#prestamos" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Préstamos</a></li>
+                            <li><a href="{{ route('home') }}" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100">Inicio</a></li>                            
                             <li><a href="{{ route('logout') }}" class="header-link px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-red-600">Salir</a></li>
                         </ul>
                     </nav>
