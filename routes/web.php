@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\LibrosController;
+use App\Http\Controllers\UsuariosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,7 +33,9 @@ Route::middleware(['auth', 'user_type:admin'])->group(function () {
     Route::post('/libros/store', [LibrosController::class, 'store'])->name('libros.store');
     Route::get('/libros/{id}/edit', [LibrosController::class, 'edit'])->name('libros.edit');
     Route::put('/libros/{id}', [LibrosController::class, 'update'])->name('libros.update');
-    Route::delete('/libros/{id}', [LibrosController::class, 'destroy'])->name('libros.destroy');    
+    Route::delete('/libros/{id}', [LibrosController::class, 'destroy'])->name('libros.destroy');
+    
+    Route::get('/usuarios', [UsuariosController::class, 'index'])->name('usuarios.index');
 });
 
 Route::middleware(['auth', 'user_type:user'])->group(function () {
