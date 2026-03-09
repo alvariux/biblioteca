@@ -88,13 +88,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#libros" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors active">
+                        <a href="" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors active">
                             <i class="fas fa-book-open mr-3 w-6 text-center"></i>
                             <span>Libros</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#prestamos" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors">
+                        <a href="{{ route('prestamos.index') }}" class="sidebar-link flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors">
                             <i class="fas fa-exchange-alt mr-3 w-6 text-center"></i>
                             <span>Préstamos</span>
                         </a>
