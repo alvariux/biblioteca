@@ -24,60 +24,68 @@
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-gray-500 text-sm">Total de libros</p>
-                    <p class="text-2xl font-bold mt-1">1,247</p>
+                    <p class="text-2xl font-bold mt-1">{{ $total_libros }}</p>
                 </div>
                 <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
                     <i class="fas fa-book text-blue-600 text-xl"></i>
                 </div>
             </div>
+            <!--
             <p class="text-green-600 text-sm mt-3">
                 <i class="fas fa-arrow-up mr-1"></i> 5.2% desde el mes pasado
             </p>
+            -->
         </div>
         
         <div class="bg-white rounded-lg shadow p-5">
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-gray-500 text-sm">Libros prestados</p>
-                    <p class="text-2xl font-bold mt-1">189</p>
+                    <p class="text-2xl font-bold mt-1">{{ $libros_pestados }}</p>
                 </div>
                 <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
                     <i class="fas fa-exchange-alt text-yellow-600 text-xl"></i>
                 </div>
             </div>
+            <!--
             <p class="text-red-600 text-sm mt-3">
                 <i class="fas fa-arrow-down mr-1"></i> 2.1% desde el mes pasado
             </p>
+            -->
         </div>
         
         <div class="bg-white rounded-lg shadow p-5">
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-gray-500 text-sm">Usuarios activos</p>
-                    <p class="text-2xl font-bold mt-1">543</p>
+                    <p class="text-2xl font-bold mt-1">{{ $total_usuarios }}</p>
                 </div>
                 <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
                     <i class="fas fa-users text-green-600 text-xl"></i>
                 </div>
             </div>
+            <!--
             <p class="text-green-600 text-sm mt-3">
                 <i class="fas fa-arrow-up mr-1"></i> 12.7% desde el mes pasado
             </p>
+            -->
         </div>
         
         <div class="bg-white rounded-lg shadow p-5">
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-gray-500 text-sm">Devoluciones pendientes</p>
-                    <p class="text-2xl font-bold mt-1">24</p>
+                    <p class="text-2xl font-bold mt-1">{{ $devoluciones_pendientes }}</p>
                 </div>
                 <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
                     <i class="fas fa-clock text-red-600 text-xl"></i>
                 </div>
             </div>
+            <!--
             <p class="text-red-600 text-sm mt-3">
                 <i class="fas fa-arrow-up mr-1"></i> 3.4% desde ayer
             </p>
+            -->
         </div>
     </div>
     
