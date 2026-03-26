@@ -112,11 +112,11 @@
             <div class="p-4 border-t border-gray-700">
                 <div class="flex items-center">
                     <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
-                        <span class="font-bold">A</span>
+                        <span class="font-bold">{{ strtoupper(substr(auth()->user()->name, 0, 1)) }}</span>
                     </div>
                     <div class="ml-3">
-                        <p class="font-medium">Administrador</p>
-                        <p class="text-xs text-gray-400">admin@biblioteca.com</p>
+                        <p class="font-medium"><a href="{{ route('usuarios.profile') }}">{{ auth()->user()->name }}</a></p>
+                        <p class="text-xs text-gray-400">{{ auth()->user()->email }}</p>
                     </div>
                 </div>
             </div>
