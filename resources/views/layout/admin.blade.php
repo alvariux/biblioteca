@@ -14,8 +14,9 @@
             </style>
         @endif
     <!-- Font Awesome para iconos -->
+     <!--
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+-->
     <style>
         .sidebar-transition {
             transition: all 0.3s ease-in-out;
